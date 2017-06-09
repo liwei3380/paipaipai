@@ -13,6 +13,16 @@
       </div>
       点击右上角分享给好友
     </div>
+    <div class="layer" v-show="ishowrollsucc" @click="ishowrollsucc = !ishowrollsucc">
+      <div class="rollresult">
+        恭喜！中奖了
+      </div>
+    </div>
+    <div class="layer" v-show="ishowrollfail" @click="ishowrollfail = !ishowrollfail">
+      <div class="rollresult">
+        遗憾！没有中奖
+      </div>
+    </div>
   </div>
 </template>
 
@@ -25,6 +35,8 @@ export default {
       score: 0,
       chance: '恭喜获得一次抽奖机会',
       ishowshare: false,
+      ishowrollsucc: false,
+      ishowrollfail: false,
     }
   },
   mounted () {
@@ -35,7 +47,7 @@ export default {
   },
   methods: {
     roll () {
-      console.log('抽奖')
+      this.ishowrollsucc = true
     },
     restart () {
       this.$router.push('/game')
@@ -85,5 +97,8 @@ export default {
 }
 .clearfix{
   overflow: hidden;
+}
+.rollresult{
+  margin-top: 2rem;
 }
 </style>
