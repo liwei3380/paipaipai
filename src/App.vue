@@ -1,12 +1,22 @@
 <template>
   <div id="app">
+    <music :audioSrc=audioSrc></music>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import Music from './components/music'
 export default {
-  name: 'app'
+  name: 'app',
+  data  () {
+    return {
+      audioSrc: 'http://47.93.47.246:8081/assets/1.mp3'
+    }
+  },
+  components: {
+    Music
+  }
 }
 </script>
 
