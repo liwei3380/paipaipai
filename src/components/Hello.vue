@@ -12,7 +12,7 @@
       <div class="rule-content">
         <div class="close" @click="isshowrule = !isshowrule"> X </div>
         <div class="rule-content-text">
-          开始，通过。。可以。。最后。。等分。。计算排名
+          点击中间的拍照按钮，捕捉上方掉落的吉祥物，记录下精彩瞬间。根据拍照画面，计算得分，得分大于10分者，将获得一次抽奖机会
         </div>
       </div>
       

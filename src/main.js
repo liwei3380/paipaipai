@@ -38,7 +38,7 @@ function getUrlParam(name){
   if (r!=null) return unescape(r[2]); 
   return null;
 }
-Indicator.open({
+/*Indicator.open({
   text:'加载中...',
   spinnerType: 'snake'
 });
@@ -60,4 +60,4 @@ axios({
       }
 }).catch(function(err){
 	console.log(err)
-})
+})*/
